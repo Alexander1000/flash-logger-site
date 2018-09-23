@@ -4,6 +4,9 @@ namespace Phing;
 
 class BuildRoutes extends \Task
 {
+    /**
+     * @var string
+     */
     protected $cache;
 
     /**
