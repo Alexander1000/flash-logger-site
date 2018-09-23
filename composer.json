@@ -25,6 +25,8 @@
     "symfony/config": "v4.0.4",
     "symfony/filesystem": "v4.0.4",
 
+    "Alexander1000/network-transport": "^1.0",
+
     "psr/log": "~1.0",
     "psr/http-message": "~1.0"
   },
