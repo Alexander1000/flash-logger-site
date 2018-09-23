@@ -1,0 +1,12 @@
+<project name="dankovtsev-site" basedir="." default="build">
+    <property name="env" description="Тип окружения (local, test, prod)" value="prod" />
+
+    <taskdef name="bootstrap" classname="\Phing\Bootstrap"/>
+
+    <target name="bootstrap" hidden="true">
+        <bootstrap/>
+    </target>
+
+    <target name="build" hidden="false" depends="bootstrap" description="Building project code">
+    </target>
+</project>
