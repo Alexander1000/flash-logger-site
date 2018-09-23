@@ -1,0 +1,8 @@
+services:
+  Router:
+    class: 'Router'
+    public: true
+
+  Beauty\Request:
+    class: 'Beauty\Request'
+    factory: 'Beauty\Request::instance'
