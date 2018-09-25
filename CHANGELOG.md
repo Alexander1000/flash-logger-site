@@ -1,5 +1,8 @@
 # Changes flash-logger-site
 
+## Added 2018-09-25
+  - Добавлены методы (get, add, has) в класс `FlashLogger/ProjectList`
+
 ## Added 2018-09-24
   - Добавлен класс `FlashLogger/ProjectList`
 
