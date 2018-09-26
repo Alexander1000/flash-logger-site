@@ -6,6 +6,7 @@ use Symfony\Component\Config\ConfigCache;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Dumper\PhpDumper;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Symfony\Component\DependencyInjection\Loader\PhpFileLoader;
 use Symfony\Component\Config\FileLocator;
 
 class BuildDI extends \Task
@@ -69,6 +70,19 @@ class BuildDI extends \Task
 
         array_walk($params, function ($configName) use ($fileLoader) {
             $fileLoader->load($configName, 'yml');
+        });
+
+        $phpParams = [
+            'params.php'
+        ];
+
+        $phpFileLoader = new PhpFileLoader(
+            $builder,
+            new FileLocator(DI_CONFIG_PATH)
+        );
+
+        array_walk($phpParams, function ($configName) use ($phpFileLoader) {
+            $phpFileLoader->load($configName, 'php');
         });
     }
 

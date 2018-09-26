@@ -5,13 +5,12 @@
     <taskdef name="bootstrap" classname="\Phing\Bootstrap"/>
     <taskdef name="di" classname="\Phing\BuildDI" />
     <taskdef name="buildroutes" classname="\Phing\BuildRoutes"/>
-    <taskdef name="buildprojects" classname="\Phing\BuildProjects"/>
 
     <target name="bootstrap" hidden="true">
         <bootstrap/>
     </target>
 
-    <target name="build" hidden="false" depends="bootstrap,build.di,build.routes,build.projects" description="Building project code">
+    <target name="build" hidden="false" depends="bootstrap,build.di,build.routes" description="Building project code">
     </target>
 
     <target name="build.di" hidden="false" description="Building symfony di" depends="bootstrap">
@@ -22,9 +21,5 @@
     <target name="build.routes" hidden="false" description="Building routes" depends="bootstrap">
         <echo>Building routes</echo>
         <buildroutes cache="var/cache/routes"/>
-    </target>
-
-    <target name="build.projects" hidden="false" depends="bootstrap">
-        <buildprojects root="${root_path}" cache="var/cache" projects="etc/projects.yml"/>
     </target>
 </project>
