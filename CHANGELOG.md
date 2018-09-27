@@ -1,5 +1,8 @@
 # Changes flash-logger-site
 
+## Added 2018-09-27
+  - Вывод списка проектов на главную страницу
+
 ## Added 2018-09-26
   - Сборка проектов для flash-logger в DI
 

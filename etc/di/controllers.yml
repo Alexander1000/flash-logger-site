@@ -4,3 +4,4 @@ services:
     public: true
     arguments:
       $request: '@Beauty\Request'
+      $projectList: '@FlashLogger\ProjectList'
