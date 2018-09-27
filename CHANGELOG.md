@@ -2,6 +2,7 @@
 
 ## Added 2018-09-27
   - Вывод списка проектов на главную страницу
+  - `FlashLogger/ProjectList` implements Iterator
 
 ## Added 2018-09-26
   - Сборка проектов для flash-logger в DI

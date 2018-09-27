@@ -2,7 +2,7 @@
 
 namespace FlashLogger;
 
-class ProjectList
+class ProjectList implements \Iterator
 {
     /**
      * @var Project[]
@@ -35,5 +35,46 @@ class ProjectList
     public function has(int $projectId): bool
     {
         return isset($this->list[$projectId]);
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return Project
+     */
+    public function current()
+    {
+        return current($this->list);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function next()
+    {
+        next($this->list);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function key()
+    {
+        return key($this->list);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function valid()
+    {
+        return $this->key() !== null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function rewind()
+    {
+        reset($this->list);
     }
 }
