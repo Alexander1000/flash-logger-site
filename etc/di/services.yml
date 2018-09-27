@@ -6,3 +6,9 @@ services:
   Beauty\Request:
     class: 'Beauty\Request'
     factory: 'Beauty\Request::instance'
+
+  FlashLogger\ProjectList:
+    class: 'FlashLogger\ProjectList'
+    factory: 'FlashLogger\ProjectListFactory::make'
+    arguments:
+      - '%flash-logger.projects%'
