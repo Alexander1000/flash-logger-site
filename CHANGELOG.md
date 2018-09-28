@@ -1,5 +1,8 @@
 # Changes flash-logger-site
 
+## Added 2018-09-28
+  - Добавлены assets bootstrap 4.1.3
+
 ## Added 2018-09-27
   - Вывод списка проектов на главную страницу
   - `FlashLogger/ProjectList` implements Iterator
