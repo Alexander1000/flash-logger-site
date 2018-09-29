@@ -22,7 +22,9 @@
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" aria-expanded="false">Проекты <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             {% for project in projectList %}
-                                <li><a href="#">{{ project.title }}</a></li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">{{ project.title }}</a>
+                                </li>
                             {% endfor %}
                         </ul>
                     </li>
