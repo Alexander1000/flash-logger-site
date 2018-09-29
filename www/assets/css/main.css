@@ -1,3 +1,7 @@
+.wrap_content > .container {
+    margin-top: 20px;
+}
+
 .container-fluid.nav-bg{
     background-color: #171b1b;
     border-bottom: 5px solid #4aaaa5;
