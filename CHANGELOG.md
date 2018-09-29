@@ -1,5 +1,8 @@
 # Changes flash-logger-site
 
+## Added 2018-09-29
+  - Добавлены assets (jQuery, Poper) и подключены к шаблону
+
 ## Added 2018-09-28
   - Добавлены assets bootstrap 4.1.3
 
