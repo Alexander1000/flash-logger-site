@@ -1,7 +1,16 @@
 services:
-  Controller\Site:
-    class: 'Controller\Site'
-    public: true
+  Controller\Site\Base:
+    class: 'Controller\Site\Base'
     arguments:
       $request: '@Beauty\Request'
       $projectList: '@FlashLogger\ProjectList'
+
+  Controller\Site\Site:
+    class: 'Controller\Site\Site'
+    public: true
+    parent: 'Controller\Site\Base'
+
+  Controller\Site\Logs:
+    class: 'Controller\Site\Logs'
+    public: true
+    parent: 'Controller\Site\Base'

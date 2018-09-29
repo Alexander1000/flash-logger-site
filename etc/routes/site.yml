@@ -1,4 +1,9 @@
 main:
   uri: /
-  controller: Controller\Site
+  controller: Controller\Site\Site
   action: index
+
+project_logs:
+  uri: /logs/{string:name}
+  controller: Controller\Site\Logs
+  action: logs
