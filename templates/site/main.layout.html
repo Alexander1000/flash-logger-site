@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Anasayfa <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Hakkımda</a>
@@ -19,13 +19,11 @@
                         <a class="nav-link" href="#">Teknoloji</a>
                     </li>
                     <li class="dropdown nav-item">
-                        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" aria-expanded="false">Web Tasarım <b class="caret"></b></a>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link" aria-expanded="false">Проекты <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Tümü</a></li>
-                            <li><a href="#">HTML 5</a></li>
-                            <li><a href="#">CSS 3</a></li>
-                            <li><a href="#">Java Script</a></li>
-                            <li><a href="#">Jquery</a></li>
+                            {% for project in projectList %}
+                                <li><a href="#">{{ project.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </li>
                     <li class="dropdown nav-item">
@@ -37,7 +35,6 @@
                             <li><a href="#">T SQL</a></li>
                         </ul>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="#">Projeler</a>
                     </li>
