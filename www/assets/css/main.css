@@ -41,3 +41,7 @@
 #main-menu-navbar {
     padding: 0 0 0 0;
 }
+
+#main-menu-navbar .dropdown-menu .nav-link {
+    white-space: nowrap;
+}
