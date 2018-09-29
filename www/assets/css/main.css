@@ -45,3 +45,8 @@
 #main-menu-navbar .dropdown-menu .nav-link {
     white-space: nowrap;
 }
+
+#main-menu-navbar .dropdown-menu .nav-link :hover {
+    color: #ffffff;
+    background-color: #4aaaa5;
+}
