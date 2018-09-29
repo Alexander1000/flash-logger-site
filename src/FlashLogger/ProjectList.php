@@ -2,7 +2,7 @@
 
 namespace FlashLogger;
 
-class ProjectList implements \Iterator
+class ProjectList implements \Iterator, \Countable
 {
     /**
      * @var Project[]
@@ -41,7 +41,7 @@ class ProjectList implements \Iterator
      * {@inheritdoc}
      * @return Project
      */
-    public function current()
+    public function current(): Project
     {
         return current($this->list);
     }
@@ -65,7 +65,7 @@ class ProjectList implements \Iterator
     /**
      * {@inheritdoc}
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->key() !== null;
     }
@@ -76,5 +76,27 @@ class ProjectList implements \Iterator
     public function rewind()
     {
         reset($this->list);
+    }
+
+    /**
+     * @return int
+     */
+    public function count(): int
+    {
+        return count($this->list);
+    }
+
+    /**
+     * @param callable $callback
+     * @return static
+     */
+    public function filter(callable $callback)
+    {
+        $list = new static();
+        $items = array_filter($this->list, $callback);
+        foreach ($items as $item) {
+            $list->add($item);
+        }
+        return $list;
     }
 }
