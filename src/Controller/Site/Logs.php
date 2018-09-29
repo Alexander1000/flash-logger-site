@@ -14,8 +14,7 @@ class Logs extends Base
     public function logsAction(array $params): Beauty\Http\ResponseInterface
     {
         $projectList = $this->projectList->filter(function (FlashLogger\Project $project) use ($params) {
-            var_dump($project->getName(), $params);
-            return $project->getName() == $params['name'];
+            return $project->getName() == $params['params']['name'];
         });
         if (!$projectList->count()) {
             return $this->render('not-found-logs');
