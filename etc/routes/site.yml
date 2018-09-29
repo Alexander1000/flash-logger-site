@@ -4,6 +4,6 @@ main:
   action: index
 
 project_logs:
-  uri: /logs/{string:name}
+  uri: /logs/{name:string}
   controller: Controller\Site\Logs
   action: logs
