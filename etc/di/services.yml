@@ -12,3 +12,17 @@ services:
     factory: 'FlashLogger\ProjectListFactory::make'
     arguments:
       - '%flash-logger.projects%'
+
+  ### FlashLogger
+  Clients\FlashLogger\Transport:
+    class: 'Clients\FlashLogger\Transport'
+    arguments:
+      $host: '%service.logger.host%'
+      $headers: '%service.logger.headers%'
+      $options: '%service.logger.options%'
+
+  Clients\FlashLogger\Client:
+    class: 'Clients\FlashLogger\Client'
+    public: true
+    arguments:
+      $transport: '@Clients\FlashLogger\Transport'

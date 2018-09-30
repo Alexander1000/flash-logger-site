@@ -8,17 +8,17 @@
     "packages": [
         {
             "name": "Alexander1000/network-transport",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Alexander1000/network-transport.git",
-                "reference": "5aee90b4016a3decba805d4c27634dbcd7235d42"
+                "reference": "c9328effb92055a6e1243c6f816560b917645b07"
             },
             "dist": {
                 "type": "tar",
-                "url": "http://packages.beauty-recommend.ru/dist/alexander1000/network-transport/alexander1000-network-transport-5aee90b4016a3decba805d4c27634dbcd7235d42-zip-0019b2.tar",
-                "reference": "5aee90b4016a3decba805d4c27634dbcd7235d42",
-                "shasum": "67b16d1fb5f39de7eaadb2a6d7bcc228d3e454da"
+                "url": "http://packages.beauty-recommend.ru/dist/alexander1000/network-transport/alexander1000-network-transport-c9328effb92055a6e1243c6f816560b917645b07-zip-3ffed7.tar",
+                "reference": "c9328effb92055a6e1243c6f816560b917645b07",
+                "shasum": "b64949e70294c492a28de07c1ebe5848e240e165"
             },
             "require": {
                 "php": ">=7.2"
@@ -37,10 +37,10 @@
             ],
             "description": "network-transport",
             "support": {
-                "source": "https://github.com/Alexander1000/network-transport/tree/1.0.0",
+                "source": "https://github.com/Alexander1000/network-transport/tree/1.0.1",
                 "issues": "https://github.com/Alexander1000/network-transport/issues"
             },
-            "time": "2018-09-23T08:09:19+00:00"
+            "time": "2018-09-30T08:11:20+00:00"
         },
         {
             "name": "phing/phing",

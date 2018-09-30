@@ -1,1 +1,5 @@
 parameters:
+  service.logger.headers:
+    Content-Type: 'application/json'
+  service.logger.options:
+    timeout: 1
