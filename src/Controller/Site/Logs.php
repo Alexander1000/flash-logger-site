@@ -45,6 +45,7 @@ class Logs extends Base
         );
 
         $response = $this->flashLoggerClient->logs($request);
+        var_dump($response);
 
         return $this->render(
             'logs',
