@@ -1,5 +1,8 @@
 # Changes flash-logger-site
 
+## Added 2018-09-30
+  - Добавлен клиент к flash-logger
+
 ## Added 2018-09-29
   - Добавлены assets (jQuery, Poper) и подключены к шаблону
   - Добавлено главное меню
