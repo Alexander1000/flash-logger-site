@@ -15,12 +15,15 @@ class Result
     public function __construct(NetworkTransport\Http\Response $response)
     {
         $this->response = $response;
-
-        if (!$response->isError() && $response->getResponse() !== null) {
-            $result = json_decode($response->getResponse(), true);
-        }
     }
 
+    /**
+     * @return array
+     * @throws Soa\Exception\EmptyReplyFromServer
+     * @throws Soa\Exception\ParseResponse
+     * @throws Soa\Exception\ServiceError
+     * @throws Soa\Exception\TransportError
+     */
     public function getResult(): array
     {
         if ($this->response->isError()) {
@@ -35,7 +38,11 @@ class Result
         if ($result === null) {
             throw new Soa\Exception\ParseResponse($this->response->getResponse(), 501);
         }
+
+        if (isset($result['error'])) {
+            throw new Soa\Exception\ServiceError($result['error']['message'], $result['error']['code']);
+        }
         
-        return $result;
+        return $result['result'];
     }
 }
