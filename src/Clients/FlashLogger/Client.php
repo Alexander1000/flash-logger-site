@@ -24,4 +24,17 @@ class Client
     {
         return $this->transport->send($request);
     }
+
+    protected function unpackResult(NetworkTransport\Http\Response $response)
+    {
+        if ($response->isError()) {
+            return null;
+        }
+
+        if ($response->getResponse() === null) {
+            return null;
+        }
+
+        $result = json_decode($response->getResponse(), true);
+    }
 }
