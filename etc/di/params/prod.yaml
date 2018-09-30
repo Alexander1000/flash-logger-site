@@ -1,0 +1,2 @@
+parameters:
+  service.logger.host: 'http://127.0.0.1:42234'
