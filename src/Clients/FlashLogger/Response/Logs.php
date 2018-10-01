@@ -2,7 +2,7 @@
 
 namespace Clients\FlashLogger\Response;
 
-class Logs
+class Logs implements \Iterator
 {
     /**
      * @var Message[]
@@ -21,5 +21,46 @@ class Logs
                 $message['tags']
             );
         }
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return Message
+     */
+    public function current(): Message
+    {
+        return current($this->items);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function next()
+    {
+        next($this->items);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function key()
+    {
+        return key($this->items);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function valid(): bool
+    {
+        return $this->key() !== null;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function rewind()
+    {
+        reset($this->items);
     }
 }
