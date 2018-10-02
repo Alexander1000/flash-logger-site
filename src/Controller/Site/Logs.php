@@ -50,6 +50,7 @@ class Logs extends Base
             'logs',
             [
                 'project' => $project,
+                'logs' => $response,
             ]
         );
     }
