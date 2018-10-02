@@ -1,5 +1,8 @@
 # Changes flash-logger-site
 
+## Added 2018-10-02
+  - Вывод логов на страницу
+
 ## Added 2018-10-01
   - Добавлен интерфейс `Iterator` для `Clients\FlashLogger\Response\Logs`
 
