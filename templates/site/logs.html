@@ -8,12 +8,13 @@
         </div>
     </main>
     <div class="container">
-        <ul>
+        <div class="list-group">
             {% for message in logs %}
-                <li>
-                    {{ message.id }}. ) {{ message.message }}
-                </li>
+                <a href="#" class="list-group-item active" data-id="{{ message.id }}">
+                    <h4 class="list-group-item-heading">Some title (fingerprint)</h4>
+                    <p class="list-group-item-text">{{ message.message }}</p>
+                </a>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 {% endblock %}
