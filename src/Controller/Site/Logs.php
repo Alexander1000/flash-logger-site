@@ -39,8 +39,8 @@ class Logs extends Base
 
         // @todo переделать на форму валидации
         $request = new Clients\FlashLogger\Request\Logs(
-            (int) $this->request->getParam('limit', 0),
-            (int) $this->request->getParam('offset', 20),
+            (int) $this->request->getParam('limit', 20),
+            (int) $this->request->getParam('offset', 0),
             $project->getToken()
         );
 

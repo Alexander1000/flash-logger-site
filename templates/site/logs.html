@@ -8,12 +8,30 @@
         </div>
     </main>
     <div class="container">
-        <ul>
+        <div class="list-group">
             {% for message in logs %}
-                <li>
-                    {{ message.id }}. ) {{ message.message }}
-                </li>
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small>3 days ago</small>
+                    </div>
+                    <p class="mb-1">{{ message.message }}</p>
+                    {% for tag in message.tags %}
+                        <span class="badge badge-pill badge-primary">{{ tag }}</span>
+                    {% endfor %}
+                    {% if message.context %}
+                        <table>
+                        {% for key, value in message.context %}
+                            <tr>
+                                <td>{{ key }}</td>
+                                <td>{{ value }}</td>
+                            </tr>
+                        {% endfor %}
+                        </table>
+                    {% endif %}
+                    <small>Donec id elit non mi porta.</small>
+                </a>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 {% endblock %}
