@@ -16,6 +16,9 @@
                         <small>3 days ago</small>
                     </div>
                     <p class="mb-1">{{ message.message }}</p>
+                    {% for tag in message.tags %}
+                        <span class="badge badge-pill badge-primary">{{ tag }}</span>
+                    {% endfor %}
                     <small>Donec id elit non mi porta.</small>
                 </a>
             {% endfor %}
