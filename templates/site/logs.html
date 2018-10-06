@@ -19,6 +19,9 @@
                     {% for tag in message.tags %}
                         <span class="badge badge-pill badge-primary">{{ tag }}</span>
                     {% endfor %}
+                    {% if message.context %}
+                        {{ dump(message.context) }}
+                    {% endif %}
                     <small>Donec id elit non mi porta.</small>
                 </a>
             {% endfor %}
