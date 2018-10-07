@@ -18,7 +18,8 @@ class Logs implements \Iterator
                 $message['level'],
                 $message['message'],
                 $message['context'],
-                $message['tags']
+                $message['tags'],
+                $message['timestamp']
             );
         }
     }

@@ -30,20 +30,27 @@ class Message
     protected $tags;
 
     /**
+     * @var int
+     */
+    protected $timestamp;
+
+    /**
      * Message constructor.
      * @param int $id
      * @param int $level
      * @param string $message
      * @param array $context
      * @param array $tags
+     * @param int $timestamp
      */
-    public function __construct(int $id, int $level, string $message, array $context, array $tags)
+    public function __construct(int $id, int $level, string $message, array $context, array $tags, int $timestamp)
     {
         $this->id = $id;
         $this->level = $level;
         $this->message = $message;
         $this->context = $context;
         $this->tags = $tags;
+        $this->timestamp = $timestamp;
     }
 
     /**
@@ -84,5 +91,13 @@ class Message
     public function getTags(): array
     {
         return $this->tags;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTimestamp(): int
+    {
+        return $this->timestamp;
     }
 }
