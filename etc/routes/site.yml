@@ -3,6 +3,11 @@ main:
   controller: Controller\Site\Site
   action: index
 
+about_page:
+  uri: /about
+  controller: Controller\Site\About
+  action: about
+
 project_logs:
   uri: /logs/{name:string}
   controller: Controller\Site\Logs

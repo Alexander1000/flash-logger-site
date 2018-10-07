@@ -26,3 +26,13 @@ services:
     public: true
     arguments:
       $transport: '@Clients\FlashLogger\Transport'
+
+  DB:
+    class: 'DB'
+    arguments:
+      $host: '%db.host%'
+      $port: '%db.port%'
+      $dbName: '%db.name%'
+      $username: '%db.username%'
+      $password: '%db.password%'
+      $options: '%db.options%'

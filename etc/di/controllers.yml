@@ -10,6 +10,12 @@ services:
     public: true
     parent: 'Controller\Site\Base'
 
+  Controller\Site\About:
+    class: 'Controller\Site\About'
+    public: true
+    parent: 'Controller\Site\Base'
+    autowire: true
+
   Controller\Site\Logs:
     class: 'Controller\Site\Logs'
     public: true

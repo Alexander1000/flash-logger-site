@@ -3,3 +3,10 @@ parameters:
     Content-Type: 'application/json'
   service.logger.options:
     timeout: 1
+
+  db.host: '127.0.0.1'
+  db.port: 6432
+  db.name: master
+  db.username: postgres
+  db.password: ''
+  db.options: []
