@@ -23,7 +23,7 @@ class About extends Base
      */
     public function aboutAction()
     {
-        var_dump($this->db->query('select 1')->fetch());
+        $this->db->query('select 1')->fetch();
         return $this->render('about');
     }
 }
